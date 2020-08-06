@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Evil Dead</title>
+    <title id="title">The Evil Dead</title>
     <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
@@ -17,24 +17,25 @@
             font-family: 'Nosifer', cursive;
             padding-top: 40px;
             padding-bottom: 30px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
         }
 
         .responsive {
             width: 100%;
             max-width: 800px;
-            max-height: 600px;
             height: auto;
-            margin-left: auto;
-            margin-right: auto;
+            display: block;
 
         }
 
         p {
             color: darkred;
             font-style: bold;
-            font-size: 20px;
+            font-size: 25px;
             font-family: 'Amatic SC', cursive;
-            background-color: greenyellow;
+            font-weight: 1000;
         }
 
         h2 {
@@ -48,7 +49,7 @@
         }
 
         h3 {
-            color: black;
+            color: darkred;
             font-size: 30px;
             font-family: sans-serif;
         }
@@ -56,31 +57,107 @@
         .box {
             background-image: url(images/Deadite1.jpg);
             background-size: cover;
-            background-position: center;
+            background-position: center; 
+            height: 100vh;
+            width: 100%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
         }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            font-size: 20px;
+            position: fixed;
+            top: 0; 
+            left: 0;
+            z-index: 10;
+            width: 100%;
+            height: 100px;
+            background-color: rgba(184, 179, 179, 0.5);
+        }
+
+        nav a:hover {
+            background: rgba(252, 117, 7, 0.849);
+        }
+
+        ul li {
+            list-style: none;
+            display: inline-block;
+            line-height: 100px;
+        }
+
+        ul li a {
+            display: block;
+            text-decoration: none;
+            font-size: 20px;
+            color: darkred;
+            padding: 0 20px;
+        }
+
+        .main {
+            background: lawngreen;
+        }
+
     </style>
 </head>
 
 <body>
-    <div id="main">
-        <div class="box">
-            <h1 id="evil-dead">EVIL DEAD FAN PAGE</h1>
-            <h2>Are you feeling groovy??</h2>
+    <div id="main" class="main">
+        <nav>
+            <ul>
+                <li><a href="#about"> About</a></li>
+                <li><a href="#contacts"> Contacts</a></li>
+                <li><a href="#links"> Links</a></li>
+            </ul>
+        </nav>
+        
+        <div class="box" id="box">
+            <section id="box">
+                <h1 id="evil-dead">EVIL DEAD FAN PAGE</h1>
+                <h2>Are you feeling groovy??</h2>
+            </section>
         </div>
-        
-        <h3>This is our hero Ash Williams.</h3>
-        
-        <div id="image-div" class="responsive">
+        <div class="about" id="about">
+            <h3>This is our hero Ash Williams.</h3>
+        </div>
+        <div id="img-div" class="responsive">
             <img src="http://www.theflow.co.za/wp-content/uploads/2015/10/ash_boomstick.png" alt="Ash" class="responsive" id="image" width="800px" height="600px">
+            <figcaption id="img-caption">This is the man who will save us from the deadites</figcaption>
         </div>
-        <p id="image-caption"><em>This is the man who will save us from the deadites</em></p>
+            
         <div id="tribute-info">
-        <p><br><br><b>This site is deticated to devoted Evil Dead fans.<br>        <a href="https://www.imdb.com/title/tt0083907/?ref_=nv_sr_srsg_3" target="_black" id="tribute-link"> 
-            Learn more about The Evil Dead here
-        </a><br>Ash Williams, his girlfriend Linda and three other friends head off to a cabin deep in the Tennessee woods. 
-            They rented the cabin for a song - sight unseen - and find the place to be in good shape, though they encounter strange occurrences and noises almost from the moment they arrive. In the basement, they find a strange book and tape recordings with a translation of the text. In playing the tapes they release an evil force bent on killing them. One by one, they become possessed and attack the others. in the end, only one will survive.</b></p>
+            <p><br><br><b>Ashley Joanna "Ash" Williams is the anti-hero protagonist of the Evil Dead series, played by Bruce Campbell, and created by director Sam Raimi.
+            First appearing in the 1981 film The Evil Dead, Ash has become very popular in modern pop culture and one of the few non-monster characters in the "horror" 
+            genre to have such notoriety. He is most easily recognized and envisioned in later material based on his final appearance in the second film however, 
+            armed with a sawed-off shotgun and a chainsaw strapped to the stump on his right arm where his hand once was.</b></p>
+        </div><br>
+        <div class="contacts">
+            <section id="contacts">
+                <h3>Contacts</h3>
+                <ul>
+                    <li><a href="mailto:beardyman44@gmail.com">Email</a></li>
+                    <li><a href="https://github.com/beardyman44" id="profile-link"> Github</a></li>
+                </ul>
+            </section>
+        </div>
+        <div class="links">
+            <section id="links">
+                <h3>To learn more about the Evil Dead franchise go to:</h3><br>
+                <ul>
+                    <li><a href="https://www.imdb.com/title/tt0083907/?ref_=nv_sr_srsg_3" target="_blank" id="tribute-link">Evil Dead(1981)</a></li>
+                    <li><a href="https://www.imdb.com/title/tt1288558/?ref_=nv_sr_srsg_6" target="_blank" id="tribute-link">Evil Dead (2013)</a></li>
+                    <li><a href="https://www.imdb.com/title/tt0092991/?ref_=nv_sr_srsg_0" target="_blank" id="tribute-link">Evil Dead II (1987)</a></li>
+                    <li><a href="https://www.imdb.com/title/tt0106308/?ref_=nv_sr_srsg_1" target="_blank" id="tribute-link">Army of Darkness (1992)</a></li>
+                    <li><a href="https://www.imdb.com/title/tt4189022/?ref_=nv_sr_srsg_3" target="_blank" id="tribute-link">Ash vs Evil Dead</a></li>
+                </ul>
+            </section>
         </div>
     </div>
 </body>
-
 </html>
